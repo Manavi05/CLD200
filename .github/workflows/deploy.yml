@@ -21,7 +21,7 @@ jobs:
           cache: npm
 
       - name: Install project dependencies
-        run: npm install
+        run: npm ci
 
       - name: Install CAP build tools
         run: |
@@ -54,4 +54,4 @@ jobs:
 
       - name: Deploy MTA to Cloud Foundry
         run: |
-          cf deploy mta_archives/employee-crud-app_1.0.0.mtar -f
+          cf deploy mta_archives/*.mtar -f
